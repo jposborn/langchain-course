@@ -36,19 +36,19 @@ services:
       - PERSIST_DIRECTORY=/chroma/chroma   # where data is stored inside the container
       - ANONYMIZED_TELEMETRY=FALSE         # or TRUE if you’re happy sending telemetry
 
-  postgres:
-    image: postgres:16
-    container_name: postgres
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: app_db
-      POSTGRES_USER: pgadmin
-      POSTGRES_PASSWORD: pgpass
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
+  # postgres:
+  #   image: postgres:16
+  #   container_name: postgres
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_DB: app_db
+  #     POSTGRES_USER: pgadmin
+  #     POSTGRES_PASSWORD: pgpass
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres-data:/var/lib/postgresql/data
 
 volumes:
   ollama-data:
-  postgres-data:
+  # postgres-data:
