@@ -1,5 +1,3 @@
-import os
-
 import chromadb
 from dotenv import load_dotenv
 from langchain_classic import hub
